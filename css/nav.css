@@ -1,0 +1,25 @@
+
+nav {
+    background-color: #4C785B;
+    display: flex;
+}
+nav ul {
+    display: flex;
+    padding: 0;
+}
+nav li {
+    list-style: none;
+    padding-left: 0;
+}
+nav li a {
+    text-decoration: none;
+    padding: 1rem;
+    padding-right: 2em;
+    padding-left: 2em;
+    background-color: #787878;
+    color: #ddd;
+}
+.active {
+    background-color: rgb(51, 112, 52);
+    color: white;
+}
