@@ -19,7 +19,7 @@
 
     <h1 id="home">Home</h1>
     <p>Welcome to my website yo</p>
-    <p>Message of the Day: Hannah is cool i guess</p>
+    <p>Message of the Day for <span id="todayDateDisplay"></span>: You are deserving of love</p>
     <img src="images/homepagephoto.jpg" alt="if it doesn't show up pretend this is a dope photo of a river">
     <p>Here is some filler text: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi consectetur sed temporibus minima earum ea. Atque quidem error nisi a architecto libero quisquam perferendis eius pariatur? Repellendus sunt, iste ipsam architecto voluptatum, quos doloribus temporibus obcaecati quasi facilis, odio inventore iusto. Nobis, neque? Soluta, in. Quasi iure tenetur adipisci aliquam?</p>
 
@@ -52,6 +52,7 @@
   // === UPDATE THE PAGE ===
   document.getElementById("lastDateDisplay").textContent = lastSeen.toDateString();
   document.getElementById("nextDateDisplay").textContent = nextVisit.toDateString();
+  document.getElementById("todayDateDisplay").textContent = today.toDateString();
   document.getElementById("progressBar").style.width = progress + "%";
   document.getElementById("progressPercent").textContent = progress.toFixed(1);
 </script>
