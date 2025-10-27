@@ -23,6 +23,38 @@
     <img src="images/homepagephoto.jpg" alt="if it doesn't show up pretend this is a dope photo of a river">
     <p>Here is some filler text: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi consectetur sed temporibus minima earum ea. Atque quidem error nisi a architecto libero quisquam perferendis eius pariatur? Repellendus sunt, iste ipsam architecto voluptatum, quos doloribus temporibus obcaecati quasi facilis, odio inventore iusto. Nobis, neque? Soluta, in. Quasi iure tenetur adipisci aliquam?</p>
 
+
+    <section id="relationship-progress" style="text-align:center; margin-top:40px;">
+    <h2>Days Until I See Kat Again </h2>
+    <p>Last seen: <span id="lastDateDisplay"></span></p>
+    <p>Next visit: <span id="nextDateDisplay"></span></p>
+
+    <div style="width:80%; max-width:400px; margin:20px auto; background:#ddd; border-radius:10px; overflow:hidden;">
+        <div id="progressBar" style="height:30px; background:#ff66b2; width:0%; transition:width 1s;"></div>
+    </div>
+
+  <p><span id="progressPercent">0</span>% of the wait is over!</p>
+</section>
+
+<script>
+  // === CONFIGURABLE VARIABLES ===
+  const lastSeen = new Date("2025-10-10");  // <-- change this to the last time you saw her
+  const nextVisit = new Date("2025-11-12"); // <-- change this to when you’ll see her next
+
+  // === CALCULATIONS ===
+  const today = new Date();
+  const totalTime = nextVisit - lastSeen;
+  const timePassed = today - lastSeen;
+  let progress = (timePassed / totalTime) * 100;
+  if (progress < 0) progress = 0;
+  if (progress > 100) progress = 100;
+
+  // === UPDATE THE PAGE ===
+  document.getElementById("lastDateDisplay").textContent = lastSeen.toDateString();
+  document.getElementById("nextDateDisplay").textContent = nextVisit.toDateString();
+  document.getElementById("progressBar").style.width = progress + "%";
+  document.getElementById("progressPercent").textContent = progress.toFixed(1);
+</script>
     
 </body>
 
